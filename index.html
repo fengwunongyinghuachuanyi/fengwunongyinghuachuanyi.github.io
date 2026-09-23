@@ -133,20 +133,30 @@
     .project-panel{min-width:0;background:rgba(246,238,223,.94);border:.13cqw solid rgba(37,34,30,.74);box-shadow:.45cqw .55cqw 0 rgba(37,34,30,.14);backdrop-filter:blur(3px)}
     .project-list-panel{display:flex;flex-direction:column;padding:1.2cqw 1.05cqw 1cqw;transform:rotate(-.3deg)}
     .project-panel-kicker{margin:0 0 .7cqw;color:var(--blue);font:800 .64cqw/1.2 var(--sans);letter-spacing:.13em;text-transform:uppercase}
-    .project-list{display:grid;grid-template-rows:repeat(4,1fr);gap:.58cqw;min-height:0;height:100%}
-    .project-tab{position:relative;display:grid;grid-template-columns:1.75cqw 1fr;column-gap:.58cqw;align-content:center;min-width:0;padding:.72cqw .62cqw;border:.08cqw solid rgba(37,34,30,.35);background:rgba(255,250,239,.46);color:var(--ink);text-align:left;cursor:pointer;transition:transform .16s ease,background .16s ease,color .16s ease,border-color .16s ease}
+    .project-list{display:flex;flex-direction:column;gap:.48cqw;min-height:0;height:100%;overflow-y:auto;padding-right:.3cqw;scrollbar-width:thin;scrollbar-color:rgba(41,79,136,.58) transparent}
+    .project-list::-webkit-scrollbar{width:.34cqw}.project-list::-webkit-scrollbar-thumb{background:rgba(41,79,136,.58);border-radius:99px}.project-list::-webkit-scrollbar-track{background:transparent}
+    .project-tab{position:relative;display:grid;grid-template-columns:1.6cqw 1fr;column-gap:.48cqw;align-content:center;flex:0 0 auto;min-width:0;min-height:3.05cqw;padding:.55cqw .58cqw;border:.08cqw solid rgba(37,34,30,.35);background:rgba(255,250,239,.46);color:var(--ink);text-align:left;cursor:pointer;transition:transform .16s ease,background .16s ease,color .16s ease,border-color .16s ease}
     .project-tab:hover{transform:translateX(.18cqw);background:rgba(255,250,239,.92);border-color:rgba(37,34,30,.72)}
     .project-tab[aria-selected="true"]{color:#fffaf0;background:var(--blue);border-color:var(--blue);box-shadow:.18cqw .22cqw 0 rgba(37,34,30,.18)}
     .project-tab-index{grid-row:1 / span 2;align-self:start;font:800 .72cqw/1 var(--hand);opacity:.72}
-    .project-tab strong{display:block;min-width:0;font:800 .84cqw/1.12 var(--sans);overflow-wrap:anywhere}
-    .project-tab small{display:block;margin-top:.24cqw;color:var(--muted);font:600 .56cqw/1.28 var(--sans)}
+    .project-tab strong{display:block;min-width:0;font:800 .76cqw/1.12 var(--sans);overflow-wrap:anywhere}
+    .project-tab small{display:block;margin-top:.2cqw;color:var(--muted);font:600 .51cqw/1.24 var(--sans)}
     .project-tab[aria-selected="true"] small{color:rgba(255,250,240,.74)}
     .project-player-panel{position:relative;display:grid;place-items:center;padding:.8cqw;overflow:hidden;background:rgba(25,24,22,.93);transform:rotate(.12deg)}
     .project-player-panel::before,.project-player-panel::after{content:"";position:absolute;z-index:2;top:-.5cqw;width:4cqw;height:1.15cqw;background:rgba(198,165,105,.72)}
     .project-player-panel::before{left:1.6cqw;transform:rotate(-6deg)}.project-player-panel::after{right:1.6cqw;transform:rotate(5deg)}
     .project-video{display:block;width:100%;height:100%;max-height:100%;object-fit:contain;background:#101010;border:.06cqw solid rgba(255,255,255,.13)}
+    .project-video[hidden],.project-video-caption[hidden],.project-intro-canvas[hidden]{display:none}
     .project-video-caption{position:absolute;z-index:3;left:1.15cqw;top:1.05cqw;max-width:calc(100% - 2.3cqw);padding:.4cqw .58cqw;background:rgba(20,19,17,.78);color:#fff9ed;font:700 .6cqw/1.25 var(--sans);letter-spacing:.04em;pointer-events:none}
-    .project-info-panel{display:flex;flex-direction:column;padding:1.22cqw 1.12cqw 1.05cqw;overflow:hidden;transform:rotate(.28deg)}
+    .project-intro-canvas{position:relative;align-self:stretch;justify-self:stretch;display:flex;flex-direction:column;justify-content:center;padding:2.2cqw 2.35cqw;color:#fff8e9;background:radial-gradient(circle at 82% 18%,rgba(203,89,59,.2),transparent 34%),linear-gradient(145deg,#1d1d1b,#2b2925);border:.06cqw solid rgba(255,255,255,.13);overflow:hidden}
+    .project-intro-canvas::before{content:"PROJECT NOTE";position:absolute;right:-1.25cqw;top:1.2cqw;transform:rotate(90deg);color:rgba(255,255,255,.16);font:800 .54cqw/1 var(--sans);letter-spacing:.18em}
+    .project-intro-kicker{margin:0 0 .65cqw;color:#eaa16f;font:800 .58cqw/1 var(--sans);letter-spacing:.16em;text-transform:uppercase}
+    .project-intro-canvas h3{max-width:90%;margin:0;font:800 2.15cqw/1.04 var(--hand);letter-spacing:.02em}
+    .project-intro-value{max-width:92%;margin:.85cqw 0 1.2cqw;color:rgba(255,248,233,.72);font:600 .7cqw/1.55 var(--sans)}
+    .project-intro-highlights{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.55cqw;margin:0;padding:0;list-style:none}
+    .project-intro-highlights li{position:relative;min-height:2.2cqw;padding:.6cqw .65cqw .6cqw 1.1cqw;border:.06cqw solid rgba(255,255,255,.16);background:rgba(255,255,255,.045);font:700 .56cqw/1.35 var(--sans)}
+    .project-intro-highlights li::before{content:"×";position:absolute;left:.48cqw;top:.52cqw;color:#eaa16f}
+    .project-info-panel{display:flex;flex-direction:column;padding:1.22cqw 1.12cqw 1.05cqw;overflow-y:auto;transform:rotate(.28deg)}
     .project-info-panel h2{margin:.35cqw 0 .62cqw;font:800 1.47cqw/1.03 var(--hand);overflow-wrap:anywhere}
     .project-description{margin:0;color:var(--muted);font:600 .63cqw/1.53 var(--sans)}
     .project-repo-name{margin:.7cqw 0 0;color:var(--ink);font:700 .56cqw/1.35 var(--sans);overflow-wrap:anywhere}
@@ -160,6 +170,7 @@
     .project-demo-button[aria-pressed="true"]{border-color:var(--coral);background:var(--coral);color:#fffaf0}
     .project-source-link{display:inline-flex;align-items:center;justify-content:center;margin-top:auto;min-height:2.1cqw;padding:.48cqw .6cqw;color:#fffaf0;background:var(--ink);text-decoration:none;font:800 .58cqw/1.2 var(--sans);letter-spacing:.03em;transition:transform .16s ease,background .16s ease}
     .project-source-link:hover{transform:translateY(-.12cqw);background:var(--blue)}
+    .project-source-link[hidden]{display:none}
     .project-status{position:absolute;z-index:4;left:50%;top:50%;transform:translate(-50%,-50%);padding:.5cqw .7cqw;background:rgba(246,238,223,.92);color:var(--ink);font:700 .6cqw/1.35 var(--sans);text-align:center}
     .project-status[hidden]{display:none}
     @media(max-width:760px){.project-layout{left:4%;right:4%;grid-template-columns:22% minmax(0,49%) 25%;gap:2%}.project-tab small{display:none}.project-info-panel h2{font-size:1.62cqw}.project-description{font-size:.67cqw;line-height:1.42}.project-tags span{font-size:.52cqw}}
@@ -191,22 +202,39 @@
           <h1 class="project-showcase-title">Projects / Demos</h1>
           <div class="project-layout">
             <aside class="project-panel project-list-panel" aria-label="个人项目列表">
-              <p class="project-panel-kicker">Selected Projects · 04</p>
+              <p class="project-panel-kicker">Selected Projects · 15</p>
               <div class="project-list" role="tablist" aria-label="选择要展示的个人项目">
-                <button class="project-tab" type="button" role="tab" aria-selected="true" data-project-key="h3"><span class="project-tab-index">01</span><strong>AI 剧生产套件</strong><small>ComfyUI · AIGC 工作流</small></button>
-                <button class="project-tab" type="button" role="tab" aria-selected="false" data-project-key="workbench"><span class="project-tab-index">02</span><strong>AI Workbench</strong><small>本地优先创作工作台</small></button>
-                <button class="project-tab" type="button" role="tab" aria-selected="false" data-project-key="audiofab"><span class="project-tab-index">03</span><strong>AudioFab</strong><small>音频智能体框架</small></button>
-                <button class="project-tab" type="button" role="tab" aria-selected="false" data-project-key="roguegen"><span class="project-tab-index">04</span><strong>RogueGen</strong><small>多 Agent 游戏生成</small></button>
+                <button class="project-tab" type="button" role="tab" aria-selected="true" data-project-key="shortdrama"><span class="project-tab-index">01</span><strong>短剧 Agent</strong><small>自主操作小云雀</small></button>
+                <button class="project-tab" type="button" role="tab" aria-selected="false" data-project-key="h3"><span class="project-tab-index">02</span><strong>AI 剧生产套件</strong><small>ComfyUI · AIGC 工作流</small></button>
+                <button class="project-tab" type="button" role="tab" aria-selected="false" data-project-key="shengzhi"><span class="project-tab-index">03</span><strong>声织</strong><small>AI 原生音乐工作台</small></button>
+                <button class="project-tab" type="button" role="tab" aria-selected="false" data-project-key="workbench"><span class="project-tab-index">04</span><strong>AI Workbench</strong><small>本地优先创作工作台</small></button>
+                <button class="project-tab" type="button" role="tab" aria-selected="false" data-project-key="audiofab"><span class="project-tab-index">05</span><strong>AudioFab</strong><small>音频智能体框架</small></button>
+                <button class="project-tab" type="button" role="tab" aria-selected="false" data-project-key="roguegen"><span class="project-tab-index">06</span><strong>RogueGen</strong><small>多 Agent 游戏生成</small></button>
+                <button class="project-tab" type="button" role="tab" aria-selected="false" data-project-key="agentblueprint"><span class="project-tab-index">07</span><strong>Agent Blueprint</strong><small>从 PRD 到可运行 Agent</small></button>
+                <button class="project-tab" type="button" role="tab" aria-selected="false" data-project-key="scriptgame"><span class="project-tab-index">08</span><strong>AI 剧本杀</strong><small>单真人多角色推演</small></button>
+                <button class="project-tab" type="button" role="tab" aria-selected="false" data-project-key="dailynews"><span class="project-tab-index">09</span><strong>Daily AI News</strong><small>证据型 AI 新闻 Skill</small></button>
+                <button class="project-tab" type="button" role="tab" aria-selected="false" data-project-key="vibeideas"><span class="project-tab-index">10</span><strong>Vibe Ideas</strong><small>新闻到产品机会</small></button>
+                <button class="project-tab" type="button" role="tab" aria-selected="false" data-project-key="effectivehtml"><span class="project-tab-index">11</span><strong>Effective HTML</strong><small>产品文档视觉系统</small></button>
+                <button class="project-tab" type="button" role="tab" aria-selected="false" data-project-key="blockout"><span class="project-tab-index">12</span><strong>Blockout 中文版</strong><small>AI 影视 3D 预演</small></button>
+                <button class="project-tab" type="button" role="tab" aria-selected="false" data-project-key="servicelens"><span class="project-tab-index">13</span><strong>ServiceLens AI</strong><small>客服对话质检</small></button>
+                <button class="project-tab" type="button" role="tab" aria-selected="false" data-project-key="studyground"><span class="project-tab-index">14</span><strong>StudyGround AI</strong><small>课程资料学习助手</small></button>
+                <button class="project-tab" type="button" role="tab" aria-selected="false" data-project-key="ideaarticle"><span class="project-tab-index">15</span><strong>Idea to Article</strong><small>观点讨论到文章</small></button>
               </div>
             </aside>
             <section class="project-panel project-player-panel" aria-label="项目演示视频">
-              <video class="project-video" id="projectVideo" controls playsinline preload="metadata" aria-label="AI 剧生产套件项目演示视频"></video>
-              <div class="project-video-caption" id="projectVideoCaption">AI 剧生产套件 · 完整演示</div>
+              <video class="project-video" id="projectVideo" controls playsinline preload="metadata" aria-label="短剧 Agent · 小云雀项目演示视频"></video>
+              <div class="project-video-caption" id="projectVideoCaption">短剧 Agent · 小云雀 · 实际操作演示</div>
+              <article class="project-intro-canvas" id="projectIntroCanvas" hidden>
+                <p class="project-intro-kicker" id="projectIntroKicker"></p>
+                <h3 id="projectIntroTitle"></h3>
+                <p class="project-intro-value" id="projectIntroValue"></p>
+                <ul class="project-intro-highlights" id="projectIntroHighlights"></ul>
+              </article>
               <div class="project-status" id="projectStatus" hidden>视频暂时无法加载</div>
             </section>
             <article class="project-panel project-info-panel" aria-live="polite">
-              <p class="project-panel-kicker" id="projectKicker">COMFYUI · AIGC PRODUCTION</p>
-              <h2 id="projectTitle">AI 剧生产套件</h2>
+              <p class="project-panel-kicker" id="projectKicker">BROWSER AGENT · SHORT DRAMA</p>
+              <h2 id="projectTitle">短剧 Agent · 小云雀</h2>
               <p class="project-description" id="projectDescription"></p>
               <p class="project-repo-name" id="projectRepoName"></p>
               <div class="project-tags" id="projectTags"></div>
@@ -302,7 +330,7 @@
       var transitioning=false;
       var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       var labels={home:'HOME / CORRIDOR',projects:'PROJECTS / GALLERY',capabilities:'CAPABILITIES / STUDIO',experience:'EXPERIENCE / ARCHIVE',contact:'CONTACT / HARBOR'};
-      var hints={home:'移动鼠标观察空间 · 点击门进入场景',projects:'选择左侧项目 · 在同一播放器中观看演示 · 右侧查看 GitHub',capabilities:'点击能力卡位或工作台 · ESC 返回',experience:'沿时间路径点击四个节点 · ESC 返回',contact:'点击邮箱、求职方向或简历摘要 · ESC 返回'};
+      var hints={home:'移动鼠标观察空间 · 点击门进入场景',projects:'选择左侧项目 · 有视频看演示 · 无视频看完整介绍',capabilities:'点击能力卡位或工作台 · ESC 返回',experience:'沿时间路径点击四个节点 · ESC 返回',contact:'点击邮箱、求职方向或简历摘要 · ESC 返回'};
       var content={
         'CAPABILITY 01':{kicker:'CORE CAPABILITY 01',title:'企业 AI 产品规划',text:'从用户、任务、流程、数据、风险和收益出发筛选 AI 场景，制定需求优先级、POC / MVP 范围、功能流程与人工复核机制，推动技术能力转化为可使用、可验证、可迭代的业务产品。',meta:['场景规划','POC / MVP','产品闭环']},
         'CAPABILITY 02':{kicker:'CORE CAPABILITY 02',title:'RAG 企业知识库',text:'围绕文档解析、知识切分、权限、召回、引用和反馈定位问题，明确知识来源、版本更新责任与访问边界，持续提升答案的可追溯性和业务可用性。',meta:['Document Parsing','Retrieval','Citation']},
@@ -325,6 +353,11 @@
       var projectTabs=Array.prototype.slice.call(document.querySelectorAll('.project-tab'));
       var projectVideo=document.getElementById('projectVideo');
       var projectVideoCaption=document.getElementById('projectVideoCaption');
+      var projectIntroCanvas=document.getElementById('projectIntroCanvas');
+      var projectIntroKicker=document.getElementById('projectIntroKicker');
+      var projectIntroTitle=document.getElementById('projectIntroTitle');
+      var projectIntroValue=document.getElementById('projectIntroValue');
+      var projectIntroHighlights=document.getElementById('projectIntroHighlights');
       var projectStatus=document.getElementById('projectStatus');
       var projectKicker=document.getElementById('projectKicker');
       var projectTitle=document.getElementById('projectTitle');
@@ -336,12 +369,26 @@
       var projectSourceLink=document.getElementById('projectSourceLink');
       var portfolioProjects={
         h3:{kicker:'COMFYUI · AIGC PRODUCTION',title:'AI 剧生产套件',description:'围绕连续镜头与批量生成，把角色与参考图、提示词、视频任务和结果缓存串成一套可复用的 ComfyUI 制作流程，展示从创意输入到成片输出的完整链路。',repoName:'fengwunongyinghuachuanyi / ComfyUI-H3-Conditioning-Cache-AI-Drama-Production-Suite',repo:'https://github.com/fengwunongyinghuachuanyi/ComfyUI-H3-Conditioning-Cache-AI-Drama-Production-Suite',tags:['ComfyUI','AIGC','批量生成'],demos:[{label:'完整演示',src:'h3-ai-drama-suite.mp4?v=20260923-no-watermark-540p',poster:'h3-ai-drama-suite.png?v=20260923-no-watermark-540p'}]},
+        shortdrama:{kicker:'BROWSER AGENT · SHORT DRAMA',title:'短剧 Agent · 小云雀',description:'面向短剧制作的领域 Agent：从故事、剧本、角色与分镜出发，在用户授权和预算范围内自主操作小云雀，完成素材绑定、片段生成与下载，直接推进到可审片短剧。当前演示已实际完成 6 段生成与下载；整集合成仍保留人工验收。',repoName:'本地个人项目 · 小云雀短剧 Agent',repo:'',tags:['Browser Agent','小云雀','短剧工作流','人工验收'],demos:[{label:'实际操作演示',src:'xiaoyunque-short-drama-agent.m4v',poster:'xiaoyunque-short-drama-agent.png'}]},
+        shengzhi:{kicker:'AI MUSIC · AGENT HARNESS',title:'声织',description:'面向音乐创作者的 AI 原生多轨工作台，把生成、分轨、编辑、提案、版本与导出组织成可追溯工程，并让 Agent 的写入动作可预览、可校验、可拒绝、可提交和可回滚。',repoName:'本地个人项目 · 声织 AI 原生音乐工作站',repo:'',tags:['AI Music','Multi-track','Proposal / Revision','Agent Harness'],demos:[],introValue:'不是把聊天框贴在传统 DAW 上，而是让 AI 生成结果进入可恢复、可比较、可审计的音乐工程。当前展示本地多轨 P0 与声织 2.0 产品壳；真实云端 Provider 能力按证据分级。',highlights:['Project / Asset / Take 统一事实源','Proposal 预览后再写入时间线','Revision 可回滚与确定性导出','Provider 来源、成本与权利可追踪']},
         workbench:{kicker:'LOCAL-FIRST · AI WORKSPACE',title:'AI Workbench',description:'本地优先的 AI 创作工作台，把论文翻译、学术润色、PPT、网页 Demo 与海报等任务收进统一工作区，强调文件可控、流程可复用和多种创作结果的一站式管理。',repoName:'fengwunongyinghuachuanyi / ai-workbench',repo:'https://github.com/fengwunongyinghuachuanyi/ai-workbench',tags:['本地优先','创作工作流','多模态'],demos:[{label:'产品演示',src:'ai-workbench.mp4',poster:'ai-workbench.png'}]},
         audiofab:{kicker:'MCP · AUDIO AGENT',title:'AudioFab',description:'用自然语言编排音频理解、编辑与生成工具的智能体框架。两个演示分别覆盖语音情感分析与数字人视频生成，以及音乐的人声/伴奏分离和曲风分析。',repoName:'fengwunongyinghuachuanyi / AudioFab',repo:'https://github.com/fengwunongyinghuachuanyi/AudioFab',tags:['MCP','音频智能体','Tool Calling'],demos:[{label:'语音分析与生成',src:'audiofab-speech-demo.mp4',poster:'audiofab-speech-demo.png'},{label:'音乐分离与分析',src:'audiofab-music-demo.mp4',poster:'audiofab-music-demo.png'}]},
-        roguegen:{kicker:'MULTI-AGENT · GAME CREATION',title:'RogueGen',description:'从一句玩法描述出发，由多个 Agent 协作完成需求分析、玩法与世界观设计、图像素材生成和代码生成，最终产出可直接运行的 HTML5 Roguelike 原型。',repoName:'PatrickStars-hub / RogueGen',repo:'https://github.com/PatrickStars-hub/RogueGen',tags:['Multi-Agent','LangGraph','HTML5 Game'],demos:[{label:'第一版生成效果',src:'roguegen-demo.mp4',poster:'roguegen-demo.png'}]}
+        roguegen:{kicker:'MULTI-AGENT · GAME CREATION',title:'RogueGen',description:'从一句玩法描述出发，由多个 Agent 协作完成需求分析、玩法与世界观设计、图像素材生成和代码生成，最终产出可直接运行的 HTML5 Roguelike 原型。',repoName:'PatrickStars-hub / RogueGen',repo:'https://github.com/PatrickStars-hub/RogueGen',tags:['Multi-Agent','LangGraph','HTML5 Game'],demos:[{label:'第一版生成效果',src:'roguegen-demo.mp4',poster:'roguegen-demo.png'}]},
+        agentblueprint:{kicker:'AGENT ENGINEERING · HARNESS',title:'Agent Blueprint',description:'输入 PRD、需求点子或 Agent 方向，推导目标、架构、组件选型与代码骨架，并用评测和差距检查把方案推进到真实可运行的 Agent 产品。',repoName:'fengwunongyinghuachuanyi / agent-blueprint',repo:'https://github.com/fengwunongyinghuachuanyi/agent-blueprint',tags:['Agent Loop','Harness','Scaffold','Evals'],demos:[],introValue:'把“做一个 Agent”拆成可验证的工程步骤：先定义目标与边界，再选择工具、记忆、权限、任务系统与运行时，最后生成骨架并检查差距。',highlights:['PRD / 点子到架构方案','17 类 Agent 组件选型','代码骨架与运行指导','评测、差距与回归检查']},
+        scriptgame:{kicker:'AI GAME · MULTI-ROLE',title:'单真人 AI 剧本杀',description:'玩家只扮演一个角色，其余角色由 AI 演绎；通过状态、线索和角色目标约束多角色对话，让单人也能完成有推进、有推理、有结局的剧本杀体验。',repoName:'fengwunongyinghuachuanyi / AI-Script-Game',repo:'https://github.com/fengwunongyinghuachuanyi/AI-Script-Game',tags:['FastAPI','Next.js','多角色 Agent'],demos:[],introValue:'核心不是让多个角色自由聊天，而是让每轮互动都受到角色身份、已知线索、阶段目标和主持规则约束。',highlights:['玩家单角色参与','AI 承担其余角色','线索与阶段状态推进','主持规则控制结局']},
+        dailynews:{kicker:'CODEX SKILL · EVIDENCE',title:'Daily AI News',description:'检索、核验、去重并整理 AI 行业与 AI × 金融动态，按重要性输出中文联合日报，同时提炼可快速验证的 Vibe Coding 功能机会。',repoName:'fengwunongyinghuachuanyi / daily-ai-news',repo:'https://github.com/fengwunongyinghuachuanyi/daily-ai-news',tags:['Codex Skill','事实核验','AI News'],demos:[],introValue:'把“今日 AI 新闻”从信息搬运变成证据型产品输入：保留原始来源、发布时间、事件时间、重要性判断与可行动功能卡。',highlights:['多源检索与事实核验','时间与重复新闻校正','按影响排序并解释原因','新闻直接连接产品机会']},
+        vibeideas:{kicker:'PRODUCT DISCOVERY · VIBE CODING',title:'Vibe Ideas from AI News',description:'承接已核实的 AI 新闻与功能卡，筛选有实际价值、相对新颖且能快速开发的小功能，并输出可直接进入开发的 MVP 需求。',repoName:'fengwunongyinghuachuanyi / find-vibe-ideas-from-ai-news',repo:'https://github.com/fengwunongyinghuachuanyi/find-vibe-ideas-from-ai-news',tags:['Product Discovery','MVP','Vibe Coding'],demos:[],introValue:'从新闻热点跨到真实产品之前，先回答谁会用、在哪个场景用、为什么需要 AI、最小输入输出是什么，以及怎样在短周期内验证。',highlights:['新闻候选转功能卡','用户—场景—需求筛选','AI 必要性与替代方案审查','生成可开发 MVP PRD']},
+        effectivehtml:{kicker:'PRODUCT DOCS · VISUAL SYSTEM',title:'Mima Effective HTML',description:'面向产品研究、PRD、复盘与技术说明的 HTML Skills，把证据、判断和决策组织成可阅读、可打印、可在浏览器验收的单文件产品文档。',repoName:'fengwunongyinghuachuanyi / mima-effective-html',repo:'https://github.com/fengwunongyinghuachuanyi/mima-effective-html',tags:['HTML Skill','PRD','证据设计'],demos:[],introValue:'设计目标不是“做得像网页”，而是让复杂产品信息更容易判断：来源能追溯、结论有边界、下一步能执行。',highlights:['内容优先的信息架构','事实、推断与建议分层','响应式与打印验收','多类产品文档模板']},
+        blockout:{kicker:'AI FILM · 3D PREVIS',title:'Blockout 简体中文版',description:'面向 AI 影视制作的 3D 预演、场面调度与 ComfyUI 参考工作流工具，用可控空间关系降低角色站位、机位和连续镜头生成的不确定性。',repoName:'fengwunongyinghuachuanyi / blockout-zh-cn',repo:'https://github.com/fengwunongyinghuachuanyi/blockout-zh-cn',tags:['3D Previs','AI Film','ComfyUI'],demos:[],introValue:'先在 3D 场景里把人物、机位和运动关系说清楚，再把稳定参考交给生成模型，解决纯文字提示难以控制空间连续性的问题。',highlights:['角色与场景空间布局','机位、构图与场面调度','参考图进入 ComfyUI','降低连续镜头漂移']},
+        servicelens:{kicker:'AI QA · SERVICE REVIEW',title:'ServiceLens AI',description:'AI 客服对话质检助手，从对话中识别服务质量、风险与改进机会，输出评分依据和可执行的话术建议。',repoName:'fengwunongyinghuachuanyi / servicelens-ai',repo:'https://github.com/fengwunongyinghuachuanyi/servicelens-ai',tags:['对话质检','风险识别','改进话术'],demos:[],introValue:'把抽象的“服务好不好”拆成可检查的证据项，让质检结论能回到原对话、能解释、也能转化为下一轮沟通动作。',highlights:['对话级服务评分','风险与关键问题定位','证据片段可追溯','生成改进话术']},
+        studyground:{kicker:'RAG · LEARNING ASSISTANT',title:'StudyGround AI',description:'AI 课程资料学习助手，围绕用户上传的资料进行检索回答、原文引用与复习题生成，避免脱离课程内容自由发挥。',repoName:'fengwunongyinghuachuanyi / studyground-ai',repo:'https://github.com/fengwunongyinghuachuanyi/studyground-ai',tags:['RAG','引用溯源','学习助手'],demos:[],introValue:'回答、复习和练习都回到同一份课程资料，通过引用让用户知道结论从哪里来，并把知识理解转化为可练习的问题。',highlights:['上传课程资料','基于资料检索回答','答案展示原文引用','自动生成复习题']},
+        ideaarticle:{kicker:'WRITING AGENT · FACT CHECK',title:'Idea to Article CN',description:'通过持续观点讨论、事实核验和自然中文改稿，把零散想法整理成有立场、有证据、像本人表达的文章。',repoName:'fengwunongyinghuachuanyi / idea-to-article-cn',repo:'https://github.com/fengwunongyinghuachuanyi/idea-to-article-cn',tags:['写作 Agent','事实核验','中文表达'],demos:[],introValue:'先把真正的观点问出来，再核验会影响判断的事实，最后围绕用户自己的表达习惯修改，而不是一次生成一篇模板化文章。',highlights:['持续讨论提炼观点','关键事实检索核验','论点、证据与反证组织','按用户表达方式改稿']}
       };
       function renderProjectDemo(item,demoIndex){
         var demo=item.demos[demoIndex]||item.demos[0];
+        projectIntroCanvas.hidden=true;
+        projectVideo.hidden=false;
+        projectVideoCaption.hidden=false;
         projectVideo.pause();
         projectStatus.hidden=true;
         projectVideo.src=demo.src;
@@ -351,6 +398,21 @@
         projectVideo.load();
         Array.prototype.slice.call(projectDemoButtons.children).forEach(function(button,index){button.setAttribute('aria-pressed',String(index===demoIndex))});
       }
+      function renderProjectIntro(item){
+        projectVideo.pause();
+        projectVideo.removeAttribute('src');
+        projectVideo.removeAttribute('poster');
+        projectVideo.load();
+        projectVideo.hidden=true;
+        projectVideoCaption.hidden=true;
+        projectStatus.hidden=true;
+        projectIntroCanvas.hidden=false;
+        projectIntroKicker.textContent=item.kicker;
+        projectIntroTitle.textContent=item.title;
+        projectIntroValue.textContent=item.introValue||item.description;
+        projectIntroHighlights.innerHTML='';
+        (item.highlights||item.tags).forEach(function(highlight){var li=document.createElement('li');li.textContent=highlight;projectIntroHighlights.appendChild(li)});
+      }
       function renderPortfolioProject(key,demoIndex){
         var item=portfolioProjects[key];
         if(!item)return;
@@ -358,15 +420,15 @@
         projectKicker.textContent=item.kicker;
         projectTitle.textContent=item.title;
         projectDescription.textContent=item.description;
-        projectRepoName.textContent='GitHub · '+item.repoName;
+        projectRepoName.textContent=item.repo?'GitHub · '+item.repoName:item.repoName;
         projectTags.innerHTML='';
         item.tags.forEach(function(tag){var span=document.createElement('span');span.textContent=tag;projectTags.appendChild(span)});
-        projectSourceLink.href=item.repo;
-        projectSourceLink.setAttribute('aria-label','在新标签页打开 '+item.title+' 的 GitHub 项目');
+        projectSourceLink.hidden=!item.repo;
+        if(item.repo){projectSourceLink.href=item.repo;projectSourceLink.setAttribute('aria-label','在新标签页打开 '+item.title+' 的 GitHub 项目')}else{projectSourceLink.removeAttribute('href')}
         projectDemoButtons.innerHTML='';
-        projectDemoSwitch.hidden=item.demos.length<2;
+        projectDemoSwitch.hidden=!item.demos||item.demos.length<2;
         item.demos.forEach(function(demo,index){var button=document.createElement('button');button.type='button';button.className='project-demo-button';button.textContent='演示 '+(index+1);button.title=demo.label;button.setAttribute('aria-pressed',String(index===(demoIndex||0)));button.addEventListener('click',function(){renderProjectDemo(item,index)});projectDemoButtons.appendChild(button)});
-        renderProjectDemo(item,demoIndex||0);
+        if(item.demos.length){renderProjectDemo(item,demoIndex||0)}else{renderProjectIntro(item)}
       }
       projectTabs.forEach(function(button,index){
         button.addEventListener('click',function(){renderPortfolioProject(button.getAttribute('data-project-key'),0)});
@@ -375,7 +437,7 @@
       projectVideo.addEventListener('loadedmetadata',function(){projectStatus.hidden=true});
       projectVideo.addEventListener('error',function(){projectStatus.hidden=false});
       projectVideo.addEventListener('play',function(){ambientAudio.pause()});
-      renderPortfolioProject('h3',0);
+      renderPortfolioProject('shortdrama',0);
       var images=Array.prototype.slice.call(document.images).filter(function(img){return img.classList.contains('scene-art')||img.classList.contains('avatar')});
       var loaded=0;
       function markLoaded(){loaded+=1;loadFill.style.width=(loaded/images.length*100)+'%';loadCount.textContent=loaded+' / '+images.length;if(loaded>=images.length){window.setTimeout(function(){loader.classList.add('hidden')},350)}}
