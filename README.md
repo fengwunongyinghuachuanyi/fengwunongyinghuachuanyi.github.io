@@ -1,7 +1,7 @@
-# 阚文杰 · 个人网站
+# 阚文杰 · 文舟个人网站
 
-企业 AI 产品经理个人作品集。
+基于 Bruno Simon 的 3D 驾驶作品集改编，展示 AI 产品经历、项目、比赛与论坛照片。
 
-网站：https://fengwunongyinghuachuanyi.github.io/
+访问地址：https://fengwunongyinghuachuanyi.github.io/
 
-静态入口为 `index.html`，图片存放在 `handdrawn-assets/`。通过 GitHub Pages 从 main 分支根目录发布。
+本站根目录是 Vite 的生产构建产物，由 GitHub Pages 从 `main` 分支发布。原作品许可见 [license.md](license.md)，新增中文字体许可见 [字体许可](fonts/FolioQingkeSubset-OFL.txt)。
