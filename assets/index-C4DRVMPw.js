@@ -95419,7 +95419,48 @@ https://github.com/browserify/crypto-browserify`);
       this.pillar.position.y = Math.sin(this.game.ticker.elapsedScaled * 0.1) * 0.25;
     }
   }
-  const projects = [
+  const strengths = [
+    [
+      "\u8FFD\u8E2A\u70ED\u70B9",
+      "\u6301\u7EED\u8DDF\u8E2A AI \u524D\u6CBF\u52A8\u6001\uFF0C\u4EB2\u81EA\u6D4B\u8BC4\u65B0\u6A21\u578B\u4E0E\u65B0\u6280\u672F\uFF0C\u5E76\u628A\u4FE1\u606F\u6C89\u6DC0\u4E3A\u4EA7\u54C1\u5224\u65AD\u3002"
+    ],
+    [
+      "\u7406\u89E3\u6280\u672F\u539F\u7406",
+      "\u7406\u89E3\u6280\u672F\u4E3A\u4EC0\u4E48\u6709\u6548\u3001\u9002\u7528\u8FB9\u754C\u5728\u54EA\u91CC\uFF0C\u5E76\u7528\u53EF\u9A8C\u8BC1\u7684 Demo \u63A2\u7D22 AI \u80FD\u529B\u3002"
+    ],
+    [
+      "AI \u4EA7\u54C1\u843D\u5730",
+      "\u8FD1\u56DB\u5E74 AI+ \u4E13\u9879\u5EFA\u8BBE\u7ECF\u9A8C\uFF0C\u7ECF\u5386\u884C\u4E1A\u5927\u6A21\u578B\u8DEF\u7EBF\u63A2\u7D22\u3001\u540E\u8BAD\u7EC3\u3001\u77E5\u8BC6\u5E93\u53CA AI \u52A9\u624B\u843D\u5730\u3002"
+    ],
+    [
+      "\u573A\u666F\u5206\u6790\u4E0E\u4EA7\u54C1\u89C4\u5212",
+      "\u4ECE\u7528\u6237\u3001\u4EFB\u52A1\u3001\u6D41\u7A0B\u3001\u6570\u636E\u3001\u98CE\u9669\u548C\u6536\u76CA\u51FA\u53D1\u7B5B\u9009\u573A\u666F\uFF0C\u786E\u5B9A\u9700\u6C42\u4F18\u5148\u7EA7\u3001POC / MVP \u8303\u56F4\u548C\u4EBA\u5DE5\u590D\u6838\u673A\u5236\u3002"
+    ],
+    [
+      "\u5F00\u653E\u534F\u4F5C",
+      "\u53C2\u4E0E AI \u884C\u4E1A\u8BBA\u575B\u548C\u521B\u65B0\u6BD4\u8D5B\uFF0C\u542C\u53D6\u4E0D\u540C\u610F\u89C1\uFF0C\u5C06\u4EA4\u6D41\u53CD\u9988\u7528\u4E8E\u5B8C\u5584\u4EA7\u54C1\u5224\u65AD\u4E0E\u5B9E\u8DF5\u65B9\u6848\u3002"
+    ],
+    [
+      "RAG \u77E5\u8BC6\u5E93\u5EFA\u8BBE",
+      "\u56F4\u7ED5\u6587\u6863\u89E3\u6790\u3001\u77E5\u8BC6\u5207\u5206\u3001\u6743\u9650\u3001\u53EC\u56DE\u3001\u5F15\u7528\u548C\u53CD\u9988\u5B9A\u4F4D\u529E\u516C\u3001\u91C7\u8D2D\u3001\u8D22\u52A1\u7B49\u77E5\u8BC6\u5E93\u95EE\u9898\u3002"
+    ],
+    [
+      "\u6A21\u578B\u8BC4\u6D4B\u4E0E\u8FED\u4EE3",
+      "\u901A\u8FC7\u6D4B\u8BD5\u96C6\u3001\u4E13\u5BB6\u8BC4\u5BA1\u548C Bad Case \u5206\u6790\uFF0C\u533A\u5206\u77E5\u8BC6\u3001\u68C0\u7D22\u3001\u751F\u6210\u4E0E\u4E1A\u52A1\u53E3\u5F84\u95EE\u9898\uFF0C\u7EC4\u7EC7\u6574\u6539\u548C\u56DE\u5F52\u9A8C\u8BC1\u3002"
+    ],
+    [
+      "\u8BAD\u7EC3\u6570\u636E\u4EA7\u54C1\u5316",
+      "\u628A\u7B97\u6CD5\u8981\u6C42\u8F6C\u5316\u4E3A\u6807\u6CE8\u89C4\u5219\u3001\u5B57\u6BB5\u89C4\u8303\u3001\u6807\u51C6\u6837\u4F8B\u548C\u9A8C\u6536\u53E3\u5F84\uFF0C\u7EC4\u7EC7\u751F\u4EA7\u3001\u62BD\u68C0\u3001\u8FD4\u5DE5\u4E0E\u8FED\u4EE3\u3002"
+    ],
+    [
+      "Agent \u4EA7\u54C1\u65B9\u6CD5",
+      "\u4ECE\u76EE\u6807\u3001\u4E0A\u4E0B\u6587\u3001\u77E5\u8BC6\u3001\u5DE5\u5177\u3001\u72B6\u6001\u3001\u6743\u9650\u3001\u6821\u9A8C\u548C\u4EBA\u5DE5\u63A5\u7BA1\u8BBE\u8BA1\u4EFB\u52A1\u95ED\u73AF\u3002"
+    ],
+    [
+      "\u590D\u6742\u9879\u76EE\u534F\u540C",
+      "\u534F\u8C03\u7B97\u6CD5\u3001\u7814\u53D1\u3001\u6570\u636E\u3001\u7B97\u529B\u3001\u4E1A\u52A1\u4E13\u5BB6\u3001\u5916\u5305\u6807\u6CE8\u53CA\u5B9E\u65BD\u56E2\u961F\u63A8\u8FDB\u9700\u6C42\u3001\u8054\u8C03\u3001\u6D4B\u8BD5\u548C\u9A8C\u6536\u3002"
+    ]
+  ], projects = [
     {
       title: "\u4E2D\u56FD\u4E2D\u94C1 AI \u667A\u80FD\u52A9\u624B\uFF08\u529E\u516C AI \u52A9\u624B\uFF09",
       period: "2025.02\u20142026.08",
@@ -111882,7 +111923,7 @@ ${e.tab}if ( ${m} ) {
           }
         ]
       ]), this.options = new Options(), this.respawns = new Respawns("landing"), this.view = new View(), this.rendering.setPostprocessing(), this.rendering.start(), this.reveal = new Reveal(), this.noises = new Noises(), this.weather = new Weather(), this.wind = new Wind(), this.tracks = new Tracks(), this.lighting = new Lighting(), this.fog = new Fog(), this.water = new Water(), this.materials = new Materials(), this.objects = new Objects(), this.explosions = new Explosions(), this.world = new World();
-      const a = __vitePreload(() => import("./rapier-ECbDTulK.js").then(async (m) => {
+      const a = __vitePreload(() => import("./rapier-DZzSvrNN.js").then(async (m) => {
         await m.__tla;
         return m;
       }), [], import.meta.url), h = this.resourcesLoader.load([
@@ -112185,6 +112226,13 @@ Three.js ${REVISION}\uFF1Ahttps://threejs.org/
     });
   });
   document.querySelector("#resume-download");
+  const strengthRecords = document.querySelector("#strength-records");
+  if (strengthRecords) for (const [l, e] of strengths) {
+    const r = document.createElement("article"), s = document.createElement("h3");
+    s.textContent = l;
+    const o = document.createElement("p");
+    o.className = "text", o.textContent = e, r.append(s, o), strengthRecords.append(r);
+  }
   const eventRecords = document.querySelector("#event-records");
   if (eventRecords) for (const l of events) {
     const e = document.createElement("article"), r = document.createElement("h3");
